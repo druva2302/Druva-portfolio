@@ -346,3 +346,8 @@ body{background:#0b0b0b}
 .hero-visual .analytics-only .visual-caption {
   z-index: 3;
 }
+
+/* Remove photo from the first section only */
+.hero-visual .profile-photo {
+  display: none !important;
+}
