@@ -295,3 +295,54 @@ body{background:#0b0b0b}
 .certificate-image-link{cursor:zoom-in}
 .certificate-image-link img{cursor:zoom-in}
 @media(max-width:600px){.certificate-viewer{padding:12px}.certificate-viewer-content{height:82vh}.certificate-viewer-close{top:8px;right:10px}}
+
+
+/* Hero: analytics visualization only, no profile photo */
+.hero-visual .analytics-only {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  background:
+    radial-gradient(
+      ellipse at 75% 30%,
+      rgba(181, 138, 54, 0.09),
+      transparent 52%
+    ),
+    linear-gradient(135deg, #111110, #080808);
+}
+
+.hero-visual .analytics-only .analytics-grid {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(210, 190, 145, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(210, 190, 145, 0.055) 1px, transparent 1px);
+  background-size: 42px 42px;
+  mask-image: linear-gradient(to bottom, black, transparent 95%);
+}
+
+/* Keep the chart bars visible */
+.hero-visual .analytics-only .chart-bars {
+  z-index: 1;
+}
+
+.hero-visual .analytics-only .chart-bars i {
+  background: linear-gradient(
+    to top,
+    rgba(181, 138, 54, 0.30),
+    rgba(240, 203, 114, 0.95)
+  );
+}
+
+/* Draw the trend line above the bars */
+.hero-visual .analytics-only .trend-line {
+  z-index: 2;
+}
+
+/* Keep labels legible */
+.hero-visual .analytics-only .chart-label,
+.hero-visual .analytics-only .visual-caption {
+  z-index: 3;
+}
