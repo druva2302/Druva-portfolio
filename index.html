@@ -11,6 +11,27 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="./style.css">
+  <style>
+    /* Hero visual: chart only. The profile photo remains in the About section. */
+    .hero-visual .analytics-only {
+      position: relative;
+      overflow: hidden;
+      isolation: isolate;
+      background: radial-gradient(ellipse at 75% 30%, rgba(181,138,54,.10), transparent 52%), linear-gradient(135deg,#111110,#080808);
+    }
+    .hero-visual .analytics-only .analytics-grid {
+      position: absolute; inset: 0; z-index: -1; pointer-events: none;
+      background-image: linear-gradient(rgba(210,190,145,.055) 1px,transparent 1px), linear-gradient(90deg,rgba(210,190,145,.055) 1px,transparent 1px);
+      background-size: 42px 42px;
+    }
+    .hero-visual .analytics-only .chart-bars i {
+      background: linear-gradient(to top,rgba(181,138,54,.35),rgba(240,203,114,.95));
+    }
+    .hero-visual .analytics-only .trend-line { z-index: 2; }
+    .hero-visual .analytics-only .chart-label,
+    .hero-visual .analytics-only .visual-caption { z-index: 3; }
+  </style>
+
 </head>
 <body>
   <div class="grain" aria-hidden="true"></div>
@@ -50,62 +71,24 @@
           </div>
           <div class="hero-footnote"><span>01 / 05</span><span class="footnote-line"></span><span>SCROLL TO EXPLORE</span></div>
         </div>
-     <div class="hero-visual reveal" aria-label="Data analytics visualization">
-  <div class="visual-top">
-    <span>FIG. 01 — DATA IN MOTION</span>
-    <span>INSIGHT THROUGH ANALYSIS</span>
-  </div>
-
-  <div class="visual-art analytics-only">
-    <div class="analytics-grid" aria-hidden="true"></div>
-
-    <div class="chart-label label-one">DATA</div>
-    <div class="chart-label label-two">INSIGHT</div>
-
-    <div class="chart-bars" aria-label="Decorative gold bar chart">
-      <i></i><i></i><i></i><i></i><i></i>
-      <i></i><i></i><i></i><i></i><i></i>
-    </div>
-
-    <svg class="trend-line" viewBox="0 0 440 300"
-         role="img" aria-label="Rising analytics trend line">
-      <defs>
-        <linearGradient id="lineGlow" x1="0" x2="1">
-          <stop offset="0" stop-color="#b58a36"/>
-          <stop offset="1" stop-color="#f0cb72"/>
-        </linearGradient>
-      </defs>
-
-      <path
-        d="M12 250 C55 230 68 247 105 200 S155 220 192 145 S250 170 285 100 S344 120 380 48 L425 28"
-        fill="none"
-        stroke="url(#lineGlow)"
-        stroke-width="3"
-        stroke-linecap="round"
-      />
-
-      <path
-        d="M12 250 C55 230 68 247 105 200 S155 220 192 145 S250 170 285 100 S344 120 380 48 L425 28 L425 290 L12 290Z"
-        fill="url(#lineGlow)"
-        opacity=".08"
-      />
-
-      <circle cx="425" cy="28" r="6" fill="#f0cb72"/>
-      <circle cx="425" cy="28" r="13" fill="#f0cb72" opacity=".15"/>
-    </svg>
-
-    <div class="visual-caption">
-      <span>FROM DATA</span>
-      <span class="caption-arrow">↗</span>
-      <span>TO DIRECTION</span>
-    </div>
-  </div>
-
-  <div class="visual-bottom">
-    <span>FIGURE A</span>
-    <span>CURIOUS MIND. DATA-DRIVEN APPROACH.</span>
-  </div>
-</div>
+        <div class="hero-visual reveal" aria-label="Data analytics visualization">
+          <div class="visual-top"><span>FIG. 01 — DATA IN MOTION</span><span>INSIGHT THROUGH ANALYSIS</span></div>
+          <div class="visual-art analytics-only">
+            <div class="analytics-grid" aria-hidden="true"></div>
+            <div class="chart-label label-one">DATA</div>
+            <div class="chart-label label-two">INSIGHT</div>
+            <div class="chart-bars" aria-label="Decorative gold bar chart"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+            <svg class="trend-line" viewBox="0 0 440 300" role="img" aria-label="Rising analytics trend line">
+              <defs><linearGradient id="lineGlow" x1="0" x2="1"><stop offset="0" stop-color="#b58a36"/><stop offset="1" stop-color="#f0cb72"/></linearGradient></defs>
+              <path d="M12 250 C55 230 68 247 105 200 S155 220 192 145 S250 170 285 100 S344 120 380 48 L425 28" fill="none" stroke="url(#lineGlow)" stroke-width="3" stroke-linecap="round"/>
+              <path d="M12 250 C55 230 68 247 105 200 S155 220 192 145 S250 170 285 100 S344 120 380 48 L425 28 L425 290 L12 290Z" fill="url(#lineGlow)" opacity=".09"/>
+              <circle cx="425" cy="28" r="6" fill="#f0cb72"/><circle cx="425" cy="28" r="13" fill="#f0cb72" opacity=".15"/>
+            </svg>
+            <div class="visual-caption"><span>FROM DATA</span><span class="caption-arrow">↗</span><span>TO DIRECTION</span></div>
+          </div>
+          <div class="visual-bottom"><span>FIGURE A</span><span>CURIOUS MIND. DATA-DRIVEN APPROACH.</span></div>
+        </div>
+      </div>
       <a class="scroll-cue" href="#about"><span class="scroll-line"></span> Scroll to explore</a>
     </section>
 
